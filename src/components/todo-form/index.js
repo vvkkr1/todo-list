@@ -1,13 +1,38 @@
-import React,{useState} from 'react'
-import './todoForm.css';
+// import React,{useState} from 'react'
+// import './todoForm.css';
 
-const TodoForm = () => {
+// const TodoForm = () => {
+//   const[value,setValue]=useState("");
+//   // const[data,setData]=useState([]);
 
-  return (
-    <div>
-      This is to do form
-    </div>
-  )
+//   function handleSubmit(event){
+//     event.preventDefault();
+    
+    
+//     console.log(value);
+//     // setData(value);
+//   }
 
-}
- export default TodoForm
+//   return (
+//     <div className='todo-form'>
+//       <form className='form' onSubmit={handleSubmit}>
+//         <div>
+//           <input 
+//             type="text" 
+//             className='todo-input' 
+//             value={value} 
+//             name='item' 
+//             onChange={(event)=>setValue(event.target.value)} 
+//             placeholder='enter item name...'
+//           />
+//         </div>
+//         <h1>{value}</h1>
+//         <div>
+//           <button className='todo-btn'>Add Items</button>
+//         </div>
+//       </form>
+//     </div>
+//   )
+
+// }
+//  export default TodoForm

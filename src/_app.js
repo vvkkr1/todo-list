@@ -1,6 +1,5 @@
 import './_app.css';
 import TodoHomepage from './pages';
-// import Homepage from './pages';
 
 function HomeApp() {
   return (
