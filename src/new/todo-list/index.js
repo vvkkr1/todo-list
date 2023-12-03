@@ -3,8 +3,6 @@ import "./todoList.css";
 
 const TodoList = (props) => {
 
-
-
   return (
     <div>
       <div style={{color:"white"}}>

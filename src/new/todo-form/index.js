@@ -17,13 +17,13 @@ const[data,setData]=useState([]);
 
       
         setData((oldValues)=>{
-            return [...oldValues, value]
+            return [...oldValues, value] 
         })
 
         //to erase data froom input box
         setValue("");
     }
-    console.log(data);
+    // console.log(data);
 
     function deleteItems(id){
         setData((oldValues)=>{
