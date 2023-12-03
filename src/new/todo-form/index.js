@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./todoForm.css";
+import TodoList from '../todo-list';
 
 const TodoForm = () => {
 //this state is to add the value
@@ -24,6 +25,13 @@ const[data,setData]=useState([]);
     }
     console.log(data);
 
+    function deleteItems(id){
+        setData((oldValues)=>{
+            return oldValues.filter((arrElem,index)=>{
+                return id !== index;
+            })
+        })
+    }
 
   return (
     <div className='todo-form-container'>
@@ -44,15 +52,14 @@ const[data,setData]=useState([]);
             {/* <p style={{color:"white"}}> {value}</p>
             <p style={{color:"white"}}> {data}</p> */}
         </form>
-        <div>
-            <ol style={{color:"white"}}>
-                {/* <li>hello</li> */}
-                <h2>Items</h2>
-                {data.map((itemVal)=>{
-                    return <li>{itemVal}</li>
-                })}
-            </ol>
-        </div>
+        {data.map((itemVal,index)=>{
+           return <TodoList 
+                    itemVal={itemVal}
+                    onSelect={deleteItems}
+                    key={index}
+                    id={index}
+                 />
+         })}
     </div>
   )
 }
