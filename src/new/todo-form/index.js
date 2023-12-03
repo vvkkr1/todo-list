@@ -9,7 +9,7 @@ const[value,setValue]=useState("");
 const[data,setData]=useState([]);
 
 //item empty array to add values
-const[items, setItems] = useState([]);
+// const[items, setItems] = useState([]);
 
    function handleOnSubmit(event){
     event.preventDefault();
