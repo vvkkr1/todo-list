@@ -14,11 +14,13 @@ const[items, setItems] = useState([]);
    function handleOnSubmit(event){
     event.preventDefault();
 
-        // setData(value);
       
         setData((oldValues)=>{
             return [...oldValues, value]
         })
+
+        //to erase data froom input box
+        setValue("");
     }
     console.log(data);
 
