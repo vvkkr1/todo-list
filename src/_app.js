@@ -1,5 +1,6 @@
-import './_app.css';
+// import './_app.css';
 import TodoHomepage from './pages';
+import "./styles.scss"
 
 function HomeApp() {
   return (
