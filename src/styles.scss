@@ -6,12 +6,60 @@
 }
 body{
     background-color: aqua;
-
     
     .App{
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: aliceblue;
+
+        .todo-homepage{
+
+            .todo-form{
+
+                .todo-form-wrap{
+                    display: flex;
+
+                    .input-type-wrap{
+                        padding: 20px 10px;
+
+                        .input-type{
+                            border: none;
+                            outline: none;
+                            height: 35px;
+                            width: 300px;
+                            border-radius: 15px;
+                            background-color: azure;
+                            &::placeholder{
+                                text-align: center;
+                            }
+                        }
+                        
+
+                    }
+                    .btn-wrap{
+                        // padding: 20px 10px;
+                        display: flex;
+                        align-items: center;
+                        // padding: 15px 10px;
+                        
+                        .btn-input{
+                            outline: none;
+                            // border: 1px solid green;
+                            padding: 10px 5px;
+                            cursor: pointer;
+                            background-color: cornflowerblue;
+                        }
+                    }
+                }
+
+                .todos-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+
+            }
+        }
     }
 }
