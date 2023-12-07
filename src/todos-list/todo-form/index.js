@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Todos from '../todos';
 import TodosList from '../todos';
 
 const TodoForm = () => {
@@ -44,10 +43,10 @@ const TodoForm = () => {
               <input 
                 type="text" 
                 name='item'
+                placeholder='write item name here...'
                 className='input-type' 
                 value={value}
                 onChange={(e)=>setValue(e.target.value)}
-                placeholder='write item name here...'
               />
           </div>
           <div className='btn-wrap'>
@@ -61,7 +60,7 @@ const TodoForm = () => {
                 id={index}
                 key={index}
                 deleteItem={deleteTodoItem}
-                />
+              />
     })}
     </div>
   )
