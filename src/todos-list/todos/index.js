@@ -1,17 +1,19 @@
 import React from 'react'
 
-const Todos = () => {
+const TodosList = (props) => {
   return (
     <div className='todos-container'>
       <div className='todos-list'>
-        <li>value</li>
+        <li>{props.itemVal}</li>
       </div>
       <div className='delete-item-icon'>
-        <i className='fa fa-times'
+        <i style={{cursor:"pointer"}} 
+           className='fa fa-times'
+           onClick={()=>{props.deleteItem(props.id)}}
         />
       </div>
     </div>
   )
 }
 
-export default Todos
+export default TodosList

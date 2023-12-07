@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import Todos from '../todos';
+import TodosList from '../todos';
 
 const TodoForm = () => {
-  const[value,setValue]=useState("");
-  const[data,setData]=useState([]);
+  const[value,setValue] = useState(""); //for taking and reading values
+  const[data,setData] = useState([]); //for storing the values
 
   function handleOnSubmit(e){
     e.preventDefault();
-    // console.log(value);
-
-    // setData((oldValues)=>{
-    //   return 
-    // })
+   
     setData((oldValues)=>{
       return [...oldValues, value]
     });
@@ -30,11 +27,19 @@ const TodoForm = () => {
 
   // }
 
+  const deleteTodoItem = (id) =>{
+    setData((oldValues)=>{
+      return oldValues.filter((item,index)=>{
+        return id!==index;
+      })
+    })
+  }
+
 
   return (
-    <div className='todo-form'>
+    <div className='todo-form-container'>
       <div className='todo-form-wrap'>
-        <form>
+        <form className='todo-form'>
           <div className='input-type-wrap'>
               <input 
                 type="text" 
@@ -46,14 +51,18 @@ const TodoForm = () => {
               />
           </div>
           <div className='btn-wrap'>
-            <button className='btn-input' onClick={handleOnSubmit}>Add Item</button>
-          </div>
-          <div>
-            {/* <button onClick={handleOnDelete}>Delete</button> */}
+            <button className='btn-input' onClick={handleOnSubmit}>add Item</button>
           </div>
         </form>
      </div>
-    <Todos/>
+    {data.map((itemVal,index)=>{
+      return <TodosList
+                itemVal={itemVal}
+                id={index}
+                key={index}
+                deleteItem={deleteTodoItem}
+                />
+    })}
     </div>
   )
 }
